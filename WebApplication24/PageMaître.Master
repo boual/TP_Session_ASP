@@ -1,0 +1,83 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PageMaître.Master.cs" Inherits="WebApplication24.Site1" %>
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <style type="text/css">
+        .Body
+        {
+            background-color: #333333;
+        }
+        .MargeGridView
+        {
+            margin-left:40%;
+            margin-top: 20%;
+            
+        }
+        .Drapeau
+        {
+            float:left;
+ 
+        }
+        .Button
+        {
+            display: block;
+            padding-top: 2.5%;
+            padding-bottom: 2.5%;
+            width: 10%;
+            float: right;
+            background-color: #3399ff;
+            border-color: #3399ff;
+            font-size: 20px;
+        }
+        .Menu_Site
+        {
+            float: left;
+            width: 100%;
+            background-color: #3399ff;
+        }
+        .PiedPageSite
+        {
+            float: left;
+            width: 100%;
+            background-color: navy;
+        }
+    </style>
+
+    <title></title>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+
+<body class = "Body">
+    <form id="form1" runat="server">
+    
+    <header style="height: 107px">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            <div class = "Menu_Site">
+                <asp:ImageButton ID="BT_Site_Pologne" runat="server" ImageUrl="~/téléchargement.jpg" Height="100" PostBackUrl="https://www.twitch.tv/" />
+                <asp:Button ID="BT_Festivals" Text="<%$ Resources:Site, Info_BT_Festivals %>" CssClass="Button" runat="server" OnClick="BT_Date_Click"/>
+                <asp:Button ID="BT_Photo" Text="<%$ Resources:Site, Info_BT_Photo %>" CssClass="Button" runat="server" OnClick="BT_Photo_Click"/>
+                <asp:Button ID="BT_Ville" Text="<%$ Resources:Site, Info_BT_Ville2 %>" CssClass="Button" runat="server" OnClick="BT_Ville_Click"/>          
+                <asp:Button ID="BT_Accueil" Text="<%$ Resources:Site, Info_BT_Accueil %>" CssClass="Button" runat="server" OnClick="BT_Accueil_Click"/>
+            </div>
+        </asp:ContentPlaceHolder>
+    </header>
+
+
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+
+        </asp:ContentPlaceHolder>
+    </div>
+
+    </form>
+</body>
+</html>
