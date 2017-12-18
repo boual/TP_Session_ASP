@@ -32,9 +32,6 @@ namespace WebApplication24
                 }
                 //On assigne le compte en texte au TextBox d'ID de Ville
                 TB_ID_Vile.Text = compte.ToString();
-
-                //On empêche la modification du TextBox
-                TB_ID_Vile.Enabled = false;
             }
 
         }
